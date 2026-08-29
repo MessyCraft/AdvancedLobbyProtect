@@ -1,4 +1,4 @@
-package io.github.messycraft.lobbyProtect;
+package io.github.messycraft.advancedlobbyprotect;
 
 import org.bukkit.block.Block;
 import org.bukkit.entity.ArmorStand;
@@ -20,7 +20,7 @@ import org.bukkit.event.vehicle.VehicleDestroyEvent;
 /**
  * 地图保护：所有会改变地图/装饰的自然与世界变化，一律静默取消。
  * <p>
- * 与玩家是否持有 lobbyprotect.bypass 无关，也不区分破坏是否由玩家造成
+ * 与玩家是否持有 advancedlobbyprotect.bypass 无关，也不区分破坏是否由玩家造成
  * ——树叶凋零、火焰蔓延、耕地被踩、水流冲走火把等，任何人都无法绕过。
  */
 public class MapProtectionListener extends LobbyListener {

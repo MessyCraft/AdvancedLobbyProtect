@@ -1,13 +1,13 @@
-name: LobbyProtect
+name: AdvancedLobbyProtect
 description: ${project.description}
 version: '${project.version}'
 
-main: io.github.messycraft.lobbyProtect.LobbyProtectPlugin
+main: io.github.messycraft.advancedlobbyprotect.AdvancedLobbyProtectPlugin
 api-version: '1.13'
 
 authors: [ ImCur_ ]
 
 permissions:
-  lobbyprotect.bypass:
+  advancedlobbyprotect.bypass:
     description: 绕过大厅常规保护（破坏/放置方块等）
     default: op

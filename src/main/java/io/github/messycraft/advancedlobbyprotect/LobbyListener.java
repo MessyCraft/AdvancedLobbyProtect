@@ -1,4 +1,4 @@
-package io.github.messycraft.lobbyProtect;
+package io.github.messycraft.advancedlobbyprotect;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -12,7 +12,7 @@ import java.util.Optional;
  */
 abstract class LobbyListener implements Listener {
 
-    private static final String BYPASS_PERMISSION = "lobbyprotect.bypass";
+    private static final String BYPASS_PERMISSION = "advancedlobbyprotect.bypass";
 
     protected boolean canBypass(Player player) {
         return player != null && player.hasPermission(BYPASS_PERMISSION);

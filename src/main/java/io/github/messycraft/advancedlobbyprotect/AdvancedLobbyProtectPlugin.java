@@ -1,11 +1,11 @@
-package io.github.messycraft.lobbyProtect;
+package io.github.messycraft.advancedlobbyprotect;
 
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventPriority;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class LobbyProtectPlugin extends JavaPlugin {
+public final class AdvancedLobbyProtectPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
@@ -13,7 +13,7 @@ public final class LobbyProtectPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerProtectionListener(), this);
         getServer().getPluginManager().registerEvents(mapListener, this);
         registerMoistureProtection(mapListener);
-        getLogger().info("LobbyProtect 已启用：玩家保护（bypass 权限：lobbyprotect.bypass）+ 地图保护 均已生效");
+        getLogger().info("AdvancedLobbyProtect 已启用：玩家保护（bypass 权限：advancedlobbyprotect.bypass）+ 地图保护 均已生效");
     }
 
     /**
@@ -35,6 +35,6 @@ public final class LobbyProtectPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        getLogger().info("LobbyProtect 已卸载。");
+        getLogger().info("AdvancedLobbyProtect 已卸载。");
     }
 }

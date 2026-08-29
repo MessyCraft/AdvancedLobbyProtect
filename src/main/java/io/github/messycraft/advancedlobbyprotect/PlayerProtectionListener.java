@@ -1,4 +1,4 @@
-package io.github.messycraft.lobbyProtect;
+package io.github.messycraft.advancedlobbyprotect;
 
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -16,7 +16,7 @@ import org.bukkit.event.vehicle.VehicleDestroyEvent;
 import java.util.Optional;
 
 /**
- * 玩家保护：玩家主动实施的破坏行为，静默取消，受 lobbyprotect.bypass 控制
+ * 玩家保护：玩家主动实施的破坏行为，静默取消，受 advancedlobbyprotect.bypass 控制
  * （持有权限者可正常操作，用于管理员建造维护）。
  */
 public class PlayerProtectionListener extends LobbyListener {
