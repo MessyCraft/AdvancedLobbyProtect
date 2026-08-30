@@ -1,10 +1,7 @@
 package io.github.messycraft.advancedlobbyprotect;
 
 import org.bukkit.block.Block;
-import org.bukkit.entity.ArmorStand;
-import org.bukkit.entity.FallingBlock;
-import org.bukkit.entity.ItemFrame;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.block.*;
@@ -100,6 +97,21 @@ public class MapProtectionListener extends LobbyListener {
     /** 方块爆炸（床/重生锚在错误维度爆炸等）。 */
     @EventHandler(ignoreCancelled = true)
     public void onBlockExplode(BlockExplodeEvent event) {
+        event.setCancelled(true);
+    }
+
+    /**
+     * 生物伤害保护：所有一般生物（包括玩家、动物、怪物、村民、NPC 插件实体等）
+     * 均不可受伤，与伤害来源无关，也无法通过 bypass 绕过。
+     * 掉落物、盔甲架、展示框/画不在此列，各自有专门规则
+     * （盔甲架与展示框允许 bypass 管理员操作）。
+     */
+    @EventHandler(ignoreCancelled = true)
+    public void onLivingDamage(EntityDamageEvent event) {
+        Entity entity = event.getEntity();
+        if (entity instanceof ArmorStand || entity instanceof Item || entity instanceof Hanging) {
+            return;
+        }
         event.setCancelled(true);
     }
 
